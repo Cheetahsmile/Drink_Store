@@ -10,7 +10,8 @@ public class KeyInputs : MonoBehaviour
 
     //private bool isJumping = false;
     //Start is called before the first frame update
-    void Start()
+    
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }

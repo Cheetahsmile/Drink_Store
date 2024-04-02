@@ -18,6 +18,15 @@ public class NewBehaviourScript : MonoBehaviour
             Instantiate(playerPrefab, respawnPoint.position, Quaternion.identity);
         }
     }
+    void FixedUpdate(){
+        RespawnPlayer();
+         
+
+      
+
+    }
+
+
     
     // // Start is called before the first frame update
     // void Start()

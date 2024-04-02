@@ -6,7 +6,7 @@ public class MoveLeftRight : MonoBehaviour
 {
     public float moveSpeed = 5f;
 
-    // Update is called once per frame
+    // Update is called  60 times per sec 
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -14,5 +14,17 @@ public class MoveLeftRight : MonoBehaviour
         Vector3 newPosition = transform.position + new Vector3(horizontalInput * moveSpeed * Time.deltaTime, 0f, 0f);
 
         transform.position = newPosition;
+    } 
+
+    void FixedUpdate(){
+        
+
+
+
+
+
+
+
+
     }
 }
