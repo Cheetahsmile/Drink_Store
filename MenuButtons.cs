@@ -4,24 +4,34 @@ using UnityEngine;
 
 public class MenuButtons : MonoBehaviour
 {
+
+    public GameObject InGameMenuScreen;
+    public Rigidbody2D playerRigidbody; // Reference to the menu GameObject
+
     public void OnStartButtonClicked()
     {
         Debug.Log("Game Start");
     }
 
-    private bool isPaused = false;
+    public bool isPaused = false;
 
     public void TogglePause()
     {
         isPaused = !isPaused;
         Time.timeScale = isPaused ? 0 : 1;
-        if (Time.timeScale == 1)
-        {
-            Debug.Log("Unpaused");
-        }
-        else
-        {
-            Debug.Log("Paused");
-        }
+        InGameMenuScreen.SetActive(isPaused);
+    }
+    public void play(){
+        isPaused = false; 
+
+        // unpause here
+        // public void OnStartButtonClicked()
+        // {
+        //     SceneManager.LoadScene("InGameMenuScreen");
+        //     isPaused = false;
+        // }
+        
+        //hide the menu
+       InGameMenuScreen.SetActive(false);
     }
 }
