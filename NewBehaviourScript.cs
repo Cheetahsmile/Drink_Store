@@ -11,22 +11,11 @@ public class NewBehaviourScript : MonoBehaviour
     public void RespawnPlayer()
     {
         if (playerPrefab && respawnPoint)
-
-        
         
         {
             Instantiate(playerPrefab, respawnPoint.position, Quaternion.identity);
         }
     }
-    void FixedUpdate(){
-        RespawnPlayer();
-         
-
-      
-
-    }
-
-
     
     // // Start is called before the first frame update
     // void Start()
